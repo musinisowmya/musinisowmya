@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('pink.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 20px;
+      background: #495057;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+      display: none;
+    }
+    .container.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #343a40;
+      color: white;
+      margin-top: 20px;
+    }
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product-item {
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-item h3 {
+      margin: 10px 0;
+    }
+    .product-item p {
+      margin: 0 10px 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .add-to-cart {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .add-to-cart:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShopSphere</h1>
+  </header>
+  
+  <nav>
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('products')">Products</a>
+    <a href="#" onclick="showTab('cart')">Cart</a>
+    <a href="#" onclick="showTab('about')">About Us</a>
+    <a href="#" onclick="showTab('contact')">Contact</a>
+    <a href="#" onclick="showTab('faq')">FAQ</a>
+    <a href="#" onclick="showTab('services')">Services</a>
+    <a href="#" onclick="showTab('payments')">Payments</a>
+    <a href="#" onclick="showTab('blog')">Blog</a>
+    <a href="#" onclick="showTab('careers')">Careers</a>
+  </nav>
+
+  <div class="container" id="home">
+    <h2>Welcome to Our ShopSphere Website</h2>
+<p>Discover a world of convenience and value at your fingertips. We bring you an exceptional online shopping experience with a diverse range of products tailored to your needs.</p>
+
+<h3>Why Shop With Us?</h3>
+<ul>
+  <li><strong>Wide Product Selection:</strong> From the latest gadgets to everyday essentials, we’ve got it all.</li>
+  <li><strong>Secure Shopping:</strong> Your privacy and security are our top priorities.</li>
+  <li><strong>Fast Delivery:</strong> Get your orders delivered quickly and hassle-free.</li>
+  <li><strong>24/7 Customer Support:</strong> Need help? Our friendly support team is here for you around the clock.</li>
+</ul>
+
+<h3>Exclusive Deals</h3>
+<p>Don't miss out on our exciting offers and discounts. Explore our product categories and grab the best deals today!</p>
+
+<h3>Join Our Community</h3>
+<p>Be a part of a growing family of happy shoppers. Sign up for our newsletter to stay updated with the latest trends, offers, and product launches.</p>
+
+<h3>Start Shopping Now!</h3>
+<p>Click on the <a href="#" onclick="showTab('products')">Products</a> tab to browse our catalog and experience the joy of online shopping like never before.</p>
+
+  </div>
+
+  <div class="container" id="products">
+    <h2>Our Products</h2>
+    <p>Explore our diverse product catalog:</p>
+    <div class="product">
+      <div class="product-item">
+        <img src="laptop.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Description of Product 1</p>
+        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="mobile.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Description of Product 2</p>
+        <button class="add-to-cart" onclick="addToCart('Product 2')">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="headphone.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Description of Product 3</p>
+        <button class="add-to-cart" onclick="addToCart('Product 3')">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="watch.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Description of Product 4</p>
+        <button class="add-to-cart" onclick="addToCart('Product 3')">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="tv.jpg" alt="Product 5">
+        <h3>Product 5</h3>
+        <p>Description of Product 5</p>
+        <button class="add-to-cart" onclick="addToCart('Product 4')">Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="ipad.jpg" alt="Product 6">
+        <h3>Product 6</h3>
+        <p>Description of Product 6</p>
+        <button class="add-to-cart" onclick="addToCart('Product 3')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="cart">
+    <h2>Your Shopping Cart</h2>
+<p>Your cart is where you’ll find all the items you’ve chosen to purchase. Review your selections, adjust quantities, and proceed to checkout with ease.</p>
+
+<h3>How to Manage Your Cart</h3>
+<ul>
+  <li><strong>View Items:</strong> See all products you’ve added to your cart.</li>
+  <li><strong>Adjust Quantities:</strong> Update the quantity of items directly from your cart.</li>
+  <li><strong>Remove Items:</strong> Delete items you no longer wish to purchase.</li>
+  <li><strong>Proceed to Checkout:</strong> Complete your order and make a payment.</li>
+</ul>
+
+<h3>Cart Tips</h3>
+<ul>
+  <li>Items in your cart are not reserved until you complete your purchase.</li>
+  <li>Check for discounts or promo codes before checking out.</li>
+  <li>Review your cart carefully to avoid missing any desired products.</li>
+</ul>
+
+<p>Ready to complete your purchase? Click the “Checkout” button and follow the steps to finalize your order. Happy shopping!</p>
+
+    <!-- Cart content will go here -->
+  </div>
+
+  <div class="container" id="about">
+    <h2>About Us</h2>
+<p>Welcome to our e-commerce platform, where quality meets convenience. Our mission is to create a seamless shopping experience for our customers by offering a wide range of high-quality products at competitive prices.</p>
+
+<h3>Our Vision</h3>
+<p>To be a leader in the e-commerce industry by continuously innovating and providing unmatched customer satisfaction.</p>
+
+<h3>Our Mission</h3>
+<ul>
+  <li>Delivering top-notch products and services.</li>
+  <li>Ensuring customer satisfaction through quick and reliable service.</li>
+  <li>Empowering communities through sustainable business practices.</li>
+</ul>
+
+<h3>Our Values</h3>
+<p>We believe in integrity, innovation, and putting our customers first. At the heart of our business is a commitment to creating a positive impact on the communities we serve.</p>
+
+<h3>Why Shop with Us?</h3>
+<p>With a focus on quality, affordability, and excellent service, we strive to make every shopping experience delightful and rewarding.</p>
+
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <h2>Contact Us</h2>
+<p>We’re here to help! If you have any questions, concerns, or feedback, please don’t hesitate to reach out to us. Our dedicated support team is available to assist you.</p>
+
+<h3>Reach Us At</h3>
+<ul>
+  <li><strong>Email:</strong> <a href="mailto:support@ecommerce.com">support@ecommerce.com</a></li>
+  <li><strong>Phone:</strong> +1-800-123-4567</li>
+  <li><strong>Address:</strong> 123 E-Commerce Street, Shopping City, SC 12345</li>
+</ul>
+
+<h3>Customer Support Hours</h3>
+<p>We are available from <strong>Monday to Friday: 9:00 AM - 6:00 PM (EST)</strong>. Feel free to drop us an email or leave a message anytime, and we’ll get back to you as soon as possible.</p>
+
+<h3>Get in Touch</h3>
+<p>Use our <a href="#">contact form</a> to send us a direct message, or connect with us on social media:</p>
+<ul>
+  <li><a href="https://facebook.com/ecommerce" target="_blank">Facebook</a></li>
+  <li><a href="https://twitter.com/ecommerce" target="_blank">Twitter</a></li>
+  <li><a href="https://instagram.com/ecommerce" target="_blank">Instagram</a></li>
+  <li><a href="https://linkedin.com/company/ecommerce" target="_blank">LinkedIn</a></li>
+</ul>
+
+<h3>Frequently Asked Questions</h3>
+<p>Looking for quick answers? Check out our <a href="#" onclick="showTab('faq')">FAQ</a> section for more information.</p>
+
+<h3>We Value Your Feedback</h3>
+<p>Your feedback is important to us! Let us know how we can improve your shopping experience.</p>
+
+  </div>
+
+  <div class="container" id="faq">
+    <h2>Frequently Asked Questions</h2>
+<p>We’ve compiled answers to some of the most common questions our customers have. If you don’t find your question here, feel free to <a href="#" onclick="showTab('contact')">contact us</a>.</p>
+
+<h3>1. What payment methods do you accept?</h3>
+<p>We accept major credit cards, debit cards, PayPal, and UPI payments for your convenience.</p>
+
+<h3>2. How can I track my order?</h3>
+<p>Once your order is shipped, you will receive a tracking link via email. You can use this link to track the status of your order.</p>
+
+<h3>3. What is your return policy?</h3>
+<p>We offer a hassle-free return policy within 30 days of purchase. Please ensure that the product is unused and in its original packaging. Visit our <a href="#">Returns & Refunds</a> page for more details.</p>
+
+<h3>4. Can I change my delivery address after placing an order?</h3>
+<p>Yes, you can modify your delivery address within 24 hours of placing your order. Please contact our support team for assistance.</p>
+
+<h3>5. Do you offer international shipping?</h3>
+<p>Yes, we deliver to selected countries worldwide. Shipping costs and delivery times vary based on location.</p>
+
+<h3>Still have questions?</h3>
+<p>If you need further assistance, visit the <a href="#" onclick="showTab('contact')">Contact Us</a> tab or email us at <a href="mailto:support@ecommerce.com">support@ecommerce.com</a>.</p>
+
+  </div>
+
+  <div class="container" id="services">
+    <h2>Our Services</h2>
+<p>At our e-commerce platform, we strive to provide exceptional services to enhance your shopping experience. Here’s what we offer:</p>
+
+<h3>1. Fast and Reliable Shipping</h3>
+<p>We partner with trusted courier services to ensure your orders reach you quickly and safely. We also offer same-day delivery in selected locations.</p>
+
+<h3>2. Secure Payment Options</h3>
+<p>Your safety is our priority. Our platform supports secure payment methods with encryption to protect your personal and financial information.</p>
+
+<h3>3. 24/7 Customer Support</h3>
+<p>Our support team is available round the clock to assist you with any queries or issues. You can reach us via email, chat, or phone.</p>
+
+<h3>4. Easy Returns and Refunds</h3>
+<p>We make the return process simple and hassle-free. If you’re unsatisfied with your purchase, initiate a return within 30 days, and we’ll process your refund swiftly.</p>
+
+<h3>5. Personalized Recommendations</h3>
+<p>Based on your browsing and shopping history, we provide tailored product recommendations to help you find exactly what you’re looking for.</p>
+
+<h3>6. Gift Wrapping Services</h3>
+<p>Send a gift to your loved ones! We offer elegant gift wrapping options to make your presents extra special.</p>
+
+<h3>7. Loyalty Rewards</h3>
+<p>Sign up for our loyalty program to earn points on every purchase. Redeem these points for exciting discounts and offers!</p>
+
+<p>Explore these services and more on our platform. <a href="#" onclick="showTab('contact')">Contact us</a> to learn how we can serve you better!</p>
+
+  </div>
+  <div class="container" id="payments" style="display: none;">
+    <h2>Payment Options</h2>
+    <p>We provide a variety of secure payment methods:</p>
+    <ul>
+      <li>Credit/Debit Cards (Visa, MasterCard, American Express)</li>
+      <li>UPI Payments</li>
+      <li>Mobile Wallets (Google Pay, Paytm)</li>
+      <li>Net Banking</li>
+      <li>Cash on Delivery (COD)</li>
+      <li>PayPal</li>
+    </ul>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px;">
+      <img src="paypal.jpg" alt="PayPal" style="width: 100px; height: auto;">
+      <img src="gpay.jpg" alt="Google Pay" style="width: 80px; height: auto;">
+      <img src="paytm.jpg" alt="Paytm" style="width: 80px; height: auto;">
+    </div>
+  </div>
+  
+  
+
+  <div class="container" id="blog">
+    <h2>Our Blog</h2>
+<p>Welcome to our blog! Stay updated with the latest trends, tips, and insights across various topics. From expert advice to product highlights, we’ve got you covered!</p>
+
+<h3>Latest Posts</h3>
+
+<div class="blog-post">
+  <h4><a href="#">1. 10 Tips for Smarter Online Shopping</a></h4>
+  <p>Learn how to make the most out of your online shopping experience. From finding the best deals to ensuring safe payments, this guide has it all.</p>
+  <small>Published on: December 10, 2024</small>
+</div>
+<br>
+
+<div class="blog-post">
+  <h4><a href="#">2. Sustainable Shopping: How to Make a Difference</a></h4>
+  <p>Discover how you can shop sustainably and contribute to a greener planet. Explore brands and products that prioritize sustainability.</p>
+  <small>Published on: December 5, 2024</small>
+</div>
+<br>
+
+<div class="blog-post">
+  <h4><a href="#">3. The Top 5 Gadgets to Watch Out for in 2024</a></h4>
+  <p>Tech enthusiasts, this one’s for you! Check out our list of the most exciting gadgets launching this year.</p>
+  <small>Published on: November 30, 2024</small>
+</div>
+<br>
+
+<div class="blog-post">
+  <h4><a href="#">4. How to Create a Cozy Home with Simple Decor Ideas</a></h4>
+  <p>Transform your home into a haven of comfort with these simple and budget-friendly decor tips.</p>
+  <small>Published on: November 20, 2024</small>
+</div>
+<br>
+
+<h3>Categories</h3>
+<ul>
+  <li><a href="#">Shopping Tips</a></li>
+  <li><a href="#">Product Reviews</a></li>
+  <li><a href="#">Sustainability</a></li>
+  <li><a href="#">Tech Trends</a></li>
+  <li><a href="#">Home & Lifestyle</a></li>
+</ul>
+
+<h3>Write for Us</h3>
+<p>Are you passionate about writing and want to share your knowledge with a wider audience? We’re always on the lookout for guest contributors! <a href="#" onclick="showTab('contact')">Contact us</a> to learn how you can submit your articles to our blog.</p>
+
+  </div>
+
+  <div class="container" id="careers">
+    <h2>Careers</h2>
+<p>Looking to grow your career in the dynamic world of e-commerce? Join our team and be part of an innovative and supportive work environment.</p>
+
+<h3>Why Work with Us?</h3>
+<ul>
+  <li>Collaborate with a passionate and diverse team.</li>
+  <li>Opportunities for personal and professional growth.</li>
+  <li>Work on cutting-edge projects in the e-commerce industry.</li>
+</ul>
+
+<h3>Open Positions</h3>
+<ul>
+  <li><strong>Software Developer</strong> – Build and maintain our platform with cutting-edge technology.</li>
+  <li><strong>Marketing Specialist</strong> – Create and execute impactful marketing campaigns.</li>
+  <li><strong>Customer Service Representative</strong> – Provide exceptional support to our customers.</li>
+  <li><strong>Logistics Coordinator</strong> – Manage and optimize product delivery processes.</li>
+</ul>
+
+<p>Don’t see a role that fits? We’re always looking for talented individuals! Email us at <a href="mailto:careers@ecommerce.com">careers@ecommerce.com</a> with your resume and cover letter.</p>
+
+<h3>Employee Perks</h3>
+<ul>
+  <li>Flexible working hours.</li>
+  <li>Health insurance and wellness programs.</li>
+  <li>Continuous learning opportunities.</li>
+  <li>Team-building activities and events.</li>
+</ul>
+<p>Come and grow with us as we redefine the future of online shopping!</p>
+
+  </div>
+
+
+  <script>
+    // Function to switch tabs
+    function showTab(tabId) {
+      document.querySelectorAll('.container').forEach(container => {
+        container.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // Show home tab by default
+    showTab('home');
+
+    // Function to handle add to cart action
+    function addToCart(productName) {
+      alert(productName + " has been added to your cart!");
+    }
+    function showTab(tabId) {
+  document.querySelectorAll('.container').forEach(container => {
+    container.style.display = 'none';
+  });
+  document.getElementById(tabId).style.display = 'block';
+}
+
+  </script>
+</body>
+</html>
